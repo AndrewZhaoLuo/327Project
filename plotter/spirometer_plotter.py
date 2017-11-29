@@ -100,6 +100,7 @@ class Plotter():
             FEV_i = min(round(start + 1 / self.dt), len(self.data_vt_v) - 1)
             if FEV_i > 0:
                 print('FEV1 (L):', self.data_vt_v[FEV_i])
+                print('FEV1/FVC:', self.data_vt_v[FEV_i] / max(self.data_vt_v))
             else:
                 print('FEV1 (L) could not be estimated!')
             print()
